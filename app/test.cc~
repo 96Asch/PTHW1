@@ -44,7 +44,7 @@ int main() {
 	std::cout << "Testing function: getPrime(int number)...: ";
 	printTestResult(assertEqualsInt(2,getPrime(list, size, listout)));
 
-	std::cout << "Testing function: getPrime(int number, int listout[])...: ";
+	std::cout << "Testing function: getPrime(int number) (listout)...: ";
 	printTestResult(assertEqualsList(testlist, listout, size));
 
 	std::cout << "Testing function: printList(int list[], int size)...: " << std::endl;

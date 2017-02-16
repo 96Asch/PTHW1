@@ -3,7 +3,7 @@ OBJECT=mylib.o
 SLIB=libmine.so
 SRC=src
 INCLUDE=include
-CFLAGS=-Wall -g
+CFLAGS=-Wall
 
 all:	lib
 

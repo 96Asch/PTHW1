@@ -15,13 +15,12 @@ lib:
 test: $(OBJECT)
 	@echo Linking shared library
 	$(CXX) $(CFLAGS) -I$(INCLUDE) -L$(LIBP) -o $@ $(OBJECT) -lmine
-	@echo Export lib location
-	export LD_LIBRARY_PATH="../lib"
 
 %.o:	%.cc
 	@echo Making $(%).o
 	@$(CXX) -I$(INCLUDE) $(CFLAGS) -c -o $@ $<
-	
+	@echo Export lib
+	export LD_LIBRARY_PATH="../lib"
 	
 clean:
 	@echo Removing $(OBJECT).

@@ -6,7 +6,7 @@ MAKE=make
 LIB=..
 LIBP=../lib
 
-all:	lib test 
+all:	lib test
 
 lib:
 	@echo Make library
@@ -14,16 +14,15 @@ lib:
 
 test: $(OBJECT)
 	@echo Linking shared library
-	$(CXX) $(CFLAGS) -I$(INCLUDE) -L$(LIBP) -o $@ $(OBJECT) -lmine
+	@$(CXX) $(CFLAGS) -I$(INCLUDE) -L$(LIBP) -o $@ $(OBJECT) -lmine
 
 %.o:	%.cc
 	@echo Making $(%).o
 	@$(CXX) -I$(INCLUDE) $(CFLAGS) -c -o $@ $<
-	@echo Export lib
-	export LD_LIBRARY_PATH="../lib"
+	
 	
 clean:
 	@echo Removing $(OBJECT).
-	@rm -f *.o $(OBJECT)
+	@rm -f *.o $(OBJECT) test
 	@+$(MAKE) -C $(LIBP) $@
 	@echo Finished Clean

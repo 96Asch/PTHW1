@@ -1,6 +1,13 @@
 #include "mylib.h"
 #include <iostream>
 
+/*
+##########################################################
+##	Name: Andrew Huang				##			       
+##	Studentnumber: s1913999				##
+##	Date: 16-02-17					##
+##########################################################
+*/
 
 bool assertTrue(bool assertion){
 	if(assertion) return true;
@@ -44,7 +51,7 @@ int main() {
 	std::cout << "Testing function: getPrime(int number)...: ";
 	printTestResult(assertEqualsInt(2,getPrime(list, size, listout)));
 
-	std::cout << "Testing function: getPrime(int number) (listout)...: ";
+	std::cout << "Testing function: getPrime(int number, int listout[])...: ";
 	printTestResult(assertEqualsList(testlist, listout, size));
 
 	std::cout << "Testing function: printList(int list[], int size)...: " << std::endl;

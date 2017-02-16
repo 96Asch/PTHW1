@@ -1,6 +1,13 @@
 #include "mylib.h"
 #include <iostream>
 
+/*
+##########################################################
+##	Name: Andrew Huang				##			       
+##	Studentnumber: s1913999				##
+##	Date: 16-02-17					##
+##########################################################
+*/
 
 bool assertTrue(bool assertion){
 	if(assertion) return true;
